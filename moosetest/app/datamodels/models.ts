@@ -7,6 +7,7 @@ export interface UserActivity {
     eventId: Key<string>;
     timestamp: string;
     userId: string;
+    testing: string;
     activity: string;
 }
 
