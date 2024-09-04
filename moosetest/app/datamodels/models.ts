@@ -5,7 +5,7 @@ export const LogsConfig: DataModelConfig<Logs> = {
     format: IngestionFormat.JSON,
   },
   storage: {
-    enabled: false,
+    enabled: true,
     order_by_fields: ["resourceLogs"],
   },
 };
@@ -59,13 +59,3 @@ export interface Logs {
     schemaUrl: string;
   }[];
 }
-
-export const ParsedLogsConfig: DataModelConfig<ParsedLogs> = {
-  ingestion: {
-    format: IngestionFormat.JSON,
-  },
-  storage: {
-    enabled: true,
-    order_by_fields: ["date"],
-  },
-};
