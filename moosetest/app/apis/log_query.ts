@@ -105,5 +105,5 @@ export function createFilterLogSql({
   const pattern = `(?i)${search}`;
 
   const searchPattern = search ? sql`WITH [${pattern}] as patterns` : sql``;
-  return sql`${searchPattern} SELECT *, COUNT(*) OVER() AS totalRowCount FROM ParsedLogs_0_6 ${whereFilter} ${sort}`;
+  return sql`${searchPattern} SELECT *, COUNT(*) OVER() AS totalRowCount FROM ParsedLogs_0_0 ${whereFilter} ${sort}`;
 }
