@@ -18,6 +18,9 @@ native_port = 9000
 host = "localhost"
 port = 4000
 
+[logger]
+export_to = "http://ga-work-email-moosetest-main-07445d.boreal.cloud/ingest/Logs"
+
 [git_config]
 main_branch_name = "main"
 
