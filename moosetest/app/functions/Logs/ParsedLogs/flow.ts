@@ -1,4 +1,4 @@
-import { ParsedLogs, Logs } from "../../../datamodels/logs";
+import { ParsedLogs, Logs } from "../../../datamodels/models";
 interface Attribute {
   key: string;
   value: {
