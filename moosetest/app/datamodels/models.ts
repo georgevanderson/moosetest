@@ -5,7 +5,7 @@ export const LogsConfig: DataModelConfig<Logs> = {
     format: IngestionFormat.JSON,
   },
   storage: {
-    enabled: false,
+    enabled: true,
     order_by_fields: ["resourceLogs"],
   },
 };
@@ -77,4 +77,5 @@ export interface ParsedLogs {
   sessionId: string;
   serviceName: string;
   machineId: string;
+  customerId: string;
 }

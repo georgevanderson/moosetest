@@ -17,7 +17,12 @@ export default function run(source: Logs): ParsedLogs[] {
   for (const resourceLog of source.resourceLogs) {
     for (const scopeLog of resourceLog.scopeLogs) {
       for (const logRecord of scopeLog.logRecords) {
+        console.log("logRecord", logRecord);
         returnArray.push({
+          customerId: getFromAttributes(
+            resourceLog.resource.attributes,
+            "customer_id",
+          ),
           date: new Date(Number(logRecord.observedTimeUnixNano) / 1000000),
           message: logRecord.body.value.stringValue,
           severityNumber: logRecord.severityNumber,
